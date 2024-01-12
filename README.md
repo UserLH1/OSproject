@@ -22,7 +22,7 @@ Before running the scripts, ensure you have `gcc` installed on your system as it
 
 ### Running the Application
 
-To compile and run your application, first clone it with ```bash git clone https://github.com/UserLH1/OSproject.git```, then follow these steps:
+To compile and run your application, first clone it with ```git clone https://github.com/UserLH1/OSproject.git```, then follow these steps:
 
 1. **Navigate to Scripts Directory**:
    Change your current working directory to the `scripts` directory within the project.
@@ -61,8 +61,30 @@ To compile and run your application, first clone it with ```bash git clone https
     ```bash
     cat <output_file_name>
     ```
-
     Replace `<output_file_name>` with the actual name of the file you wish to view.
+
+5. **Testing**:
+To validate the correctness of the executables, run the Test.sh script. This script will compare the output of each program against the expected results stored in the test_files/expected_output directory.
+
+    ```bash
+    ./Test.sh
+    ```
+### Automation with `automate.sh`
+
+7. **Automating the Entire Process**:
+   The `automate.sh` script is designed to seamlessly integrate the compilation, execution, and testing phases of your project. Running this script will automatically perform all the necessary steps to compile the source code, execute the binaries, and run tests against them.
+
+    ```bash
+    ./automate.sh
+    ```
+
+    Here's what `automate.sh` does:
+
+    - **Compile**: First, it invokes `Compile.sh` to compile all `.c` source files in the `src` directory. The compiled executables are placed in the `bin` directory.
+    - **Execute**: Next, it runs `Run.sh` to execute each of the compiled binaries, capturing their output in the `output` folder.
+    - **Test**: Finally, it executes `Test.sh` to compare the actual output of each program with the expected output defined in the `test_files/expected_output` directory. This step verifies the correctness of each program.
+
+   By running `automate.sh`, you can efficiently ensure that all parts of your project work together as expected. It's especially useful for continuous integration environments or when making significant changes to the codebase, as it allows for quick verification that everything is functioning correctly.
 
 ## Built With
 
