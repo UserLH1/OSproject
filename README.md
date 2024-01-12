@@ -71,5 +71,5 @@ To compile and run your application, first clone it with ```bash git clone https
 ## Authors
 
 * **Lazea Horatiu**  - UserLH1(https://github.com/UserLH1)
-* **Lepadatu Emanuel**  - UserLEmanuel(https://github.com/UserLH1)
+* **Lepadatu Emanuel**  - UserLEmanuel(https://github.com/UserLEmanuel)
 
