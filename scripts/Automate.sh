@@ -1,24 +1,20 @@
 #!/bin/bash
 
-# Set the project root directory
 project_root="$(dirname "$(realpath "$0")")/.."
 
-# Define the directories for scripts
 compile_script="$project_root/scripts/Compile.sh"
 run_script="$project_root/scripts/Run.sh"
-test_script="$project_root/scripts/Test.sh" # Assuming there's a separate script for testing
+test_script="$project_root/scripts/Test.sh" 
 
-# Define colors
+# Define colors for terminal
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-# Function to echo with color
 echo_color() {
     echo -e "${1}${2}${NC}"
 }
 
-# Function to echo with color and formatting
 echo_color_format() {
     echo -e "${1}#### ${2} ####${NC}"
 }
